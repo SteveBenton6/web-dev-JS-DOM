@@ -11,3 +11,6 @@
 
 let anchorElement = document.getElementById("external-link");
 anchorElement.href = "https://www.google.com/";
+
+anchorElement = document.querySelector("#external-link");
+anchorElement.href = "https://www.readingfc.co.uk/";

@@ -29,7 +29,7 @@ console.dir(headerElement2);
 
 let secondPara = document.querySelectorAll("p")[1];
 //Alternative
-secondPara = document.querySelectorAll(".link-section");
+// secondPara = document.querySelectorAll(".link-section");
 console.dir(secondPara);
 
 // 5. BONUS TASK: Try changing the text content of the <p> element

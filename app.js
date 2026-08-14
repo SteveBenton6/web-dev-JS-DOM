@@ -26,3 +26,19 @@ let firstParagraph = document.querySelector("p");
 
 // 3. Insert the new element into the parent element content
 firstParagraph.append(newAnchorElement);
+
+// REMOVE ELEMENTS
+// 1. Select the element that should be removed
+let firstH1Element = document.querySelector("h1");
+
+// 2. Remove it!
+firstH1Element.remove();
+// For Older Browsers:
+// firstH1Element.parentElement.removeChild(firstH1Element);
+
+// MOVE ELEMENTS
+// 1. Select the element that should be moved
+// Done Above:
+// let firstParagraph = document.querySelector("p");
+// 2. Insert in new location (browser will automatically delete old)
+firstParagraph.parentElement.append(firstParagraph);

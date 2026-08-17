@@ -1,0 +1,24 @@
+/* CSS Comments Format */
+
+body {
+  background-color: bisque;
+  text-align: center;
+  margin: 50px;
+}
+
+h1 {
+  color: rgb(255, 0, 0);
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 20%;
+  margin: auto;
+}
+
+input {
+  margin: 20px;
+}

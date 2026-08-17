@@ -1,14 +1,18 @@
 // JavaScript Comments
 
-let productNameInputElement = document.getElementById("product-name");
-let remainingCharsElement = document.getElementById("remaining-chars");
+const productNameInputElement = document.getElementById("product-name");
+const remainingCharsElement = document.getElementById("remaining-chars");
 
-let maxAllowedChars = productNameInputElement.maxLength;
+const maxAllowedChars = productNameInputElement.maxLength;
 
 function updateRemainingCharacters(event) {
-  let enteredText = event.target.value;
-  let charsLeft = maxAllowedChars - enteredText.length;
+  remainingCharsElement.style.color = "green";
+  const enteredText = event.target.value;
+  const charsLeft = maxAllowedChars - enteredText.length;
   remainingCharsElement.innerText = charsLeft;
+  if (charsLeft < 10) {
+    remainingCharsElement.style.color = "red";
+  }
   console.log(charsLeft);
 }
 

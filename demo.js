@@ -1,14 +1,15 @@
 // JavaScript Comments
 
-let inputElement = document.querySelector("input");
+let productNameInputElement = document.getElementById("product-name");
+let remainingCharsElement = document.getElementById("remaining-chars");
 
-function readUserInput(event) {
-  let enteredText = inputElement.value;
-  console.log(`Item Entered in Input: ${enteredText}`);
-  console.log(event);
-  console.log(event.type); //Event type
-  console.log(event.data); //Single Value Entered
-  console.log(event.target.value); //Cumulative Value Entered
+let maxAllowedChars = productNameInputElement.maxLength;
+
+function updateRemainingCharacters(event) {
+  let enteredText = event.target.value;
+  let charsLeft = maxAllowedChars - enteredText.length;
+  remainingCharsElement.innerText = charsLeft;
+  console.log(charsLeft);
 }
 
-inputElement.addEventListener("input", readUserInput);
+productNameInputElement.addEventListener("input", updateRemainingCharacters);
